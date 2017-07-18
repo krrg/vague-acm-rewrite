@@ -5,24 +5,25 @@ const path = require('path');
 
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const autoprefixer = require('autoprefixer');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 const isProd = process.env.NODE_ENV === 'production';
 
 const extractSass = new ExtractTextPlugin({
     filename: "[name].[contenthash].css",
-    disable: (! isProduction)
+    disable: (! isProd)
 });
 
 
 module.exports = {
 
     entry: [
-        'index.js',
+        './index.js',
     ],
 
     output: {
         path: path.resolve(__dirname, '__build__'),
-        filename: 'out.js',
+        filename: 'index_bundle.js',
         publicPath: '/'
     },
 
@@ -35,7 +36,8 @@ module.exports = {
                     'babel-loader'
                 ]
             }, {
-                test: extractSass.extract({
+                test: /\.scss$/,
+                use: extractSass.extract({
                     use: [{
                         loader: "css-loader"
                     }, {
@@ -77,7 +79,8 @@ module.exports = {
     plugins: [
         extractSass,
         new HtmlWebpackPlugin({
-            title: 'Webpack App'
+            title: 'Webpack App',
+            filename: 'index.html',
         })
     ],
 
