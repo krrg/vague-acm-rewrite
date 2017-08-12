@@ -1,20 +1,35 @@
+@import "colors.scss";
+
+$foundation-palette: (
+  primary: $darkHighlight,
+  secondary: #767676,
+  success: #3adb76,
+  warning: #ffae00,
+  alert: #cc4b37,
+);
 @import "~foundation-sites/scss/foundation";
 @include foundation-everything;
 
-@import "colors.scss";
-@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
 
-html, body {
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans');
+@import url('https://fonts.googleapis.com/css?family=Cabin');
+
+html {
+    height: 100%;
+}
+
+body {
     background-color: $lightBackground;
     font-family: 'Noto Sans', sans-serif;
+    min-height: 100%;
 }
 
 h1, h2, h3, h4, h5 {
-    font-family: 'Noto Sans', sans-serif;
-    font-weight: 700;
+    font-family: 'Cabin', sans-serif;
+    font-weight: 200;
 }
 
 .button {
-    background-color: $darkHighlight;
-    color: whitesmoke;
+    // background-color: $darkHighlight;
+    // color: whitesmoke;
 }
