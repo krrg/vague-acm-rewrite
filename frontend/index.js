@@ -1,16 +1,22 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import * as F from "react-foundation";
+import { BrowserRouter, Route, Redirect } from "react-router-dom";
+
+import Login from "./components/Login";
+import Bank from "./components/Bank";
 
 import "./index.scss";
 
 const Index = () => {
     return (
-        <div>
-            <h1>Bank of Brigham</h1>
-
-            <F.Button>Hello</F.Button>
-        </div>
+        <BrowserRouter>
+            <div>
+                <Route path="/" exact component={() => <Redirect to="/login" />} />
+                <Route path="/login" component={() => <Login />} />
+                <Route path="/bank" component={() => <Bank />} />
+            </div>
+        </BrowserRouter>
     )
 }
 
