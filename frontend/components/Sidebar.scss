@@ -52,8 +52,7 @@
             }
 
             &:hover, &:active {
-                background-color: lighten($darkBackground, 10);
-                box-shadow: 0 0 18px $darkBackground;
+                background-color: lighten($darkBackground, 5);
             }
 
             &.activePage {
