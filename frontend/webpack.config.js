@@ -59,7 +59,7 @@ module.exports = {
             }, {
                 test: /\.(jpg|jpeg|gif|png)$/,
                 exclude: /node_modules/,
-                include: path.resolve(__dirname, 'resources', 'img'),
+                include: path.resolve(__dirname, 'resources'),
                 use: [
                     {
                         loader: 'file-loader',
@@ -96,7 +96,10 @@ module.exports = {
         },
         historyApiFallback: true,
         publicPath: 'http://localhost:4000/',
-        contentBase: path.join(__dirname, "__build__")
+        contentBase: [
+            path.join(__dirname, "__build__"),
+            path.join(__dirname, 'resources')
+        ]
     }
 
 

@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import * as F from "react-foundation";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
-import Login from "./components/Login";
-import Bank from "./components/Bank";
+import Login from "./components/Login/Login";
+import Bank from "./components/Bank/Bank";
 
 import "./index.scss";
 

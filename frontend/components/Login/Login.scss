@@ -27,4 +27,21 @@
     }
 
     height: 100vh;
+
+    .LogoLoginRow {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+
+        img {
+            @media(max-width: 999px) {
+                display: none;
+            }
+            margin-right: 4em;
+        }
+
+        border: 1px solid black;
+        padding: 4em;
+        background-color: white;
+    }
 }
