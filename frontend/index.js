@@ -1,20 +1,20 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import * as F from "react-foundation";
 import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
-import Login from "./components/Login/Login";
-import Bank from "./components/Bank/Bank";
+import Sidebar from "./components/Sidebar";
+import Home from "./components/Home";
 
 import "./index.scss";
 
 const Index = () => {
     return (
         <BrowserRouter>
-            <div>
-                <Route path="/" exact component={() => <Redirect to="/login" />} />
-                <Route path="/login" component={() => <Login />} />
-                <Route path="/bank" component={() => <Bank />} />
+            <div className="ResponsivePageLayout">
+                <Sidebar />
+                <div className="PageContent">
+                    <Route path="/" exact component={() => <Home />} />
+                </div>
             </div>
         </BrowserRouter>
     )

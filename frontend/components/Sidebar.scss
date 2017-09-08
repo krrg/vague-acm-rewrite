@@ -1,0 +1,68 @@
+@import "colors.scss";
+@import "utils.scss";
+
+.Sidebar {
+    @extend .Depth;
+
+    flex-grow: 0;
+
+    width: 32em;
+    background-color: $darkBackground;
+    
+    height: 100%;
+    min-height: 100vh;
+    margin: 0;
+    
+    color: $lightBackground;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+
+    .__logoContainer {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-grow: 0;
+
+        .__logo {
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+
+    .__links {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        a {
+
+            $separatorBorder: 1px solid lighten($darkBackground, 15);
+            color: $lightBackground;
+
+            padding: 1em;
+            font-size: 16pt;
+            text-decoration: none;
+            border-bottom: $separatorBorder;
+
+            &:first-child {
+                border-top: $separatorBorder;
+            }
+
+            &:hover, &:active {
+                background-color: lighten($darkBackground, 10);
+                box-shadow: 0 0 18px $darkBackground;
+            }
+
+            &.activePage {
+                background-color: lighten($darkBackground, 10);
+                box-shadow: 0 0 18px $darkBackground;
+            }
+
+            margin: 0;
+        }
+
+    }
+}
