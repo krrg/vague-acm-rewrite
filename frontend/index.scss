@@ -1,14 +1,14 @@
-@import "colors.scss";
+@import "colors.scss";/
 
-$foundation-palette: (
-  primary: $darkHighlight,
-  secondary: #767676,
-  success: #3adb76,
-  warning: #ffae00,
-  alert: #cc4b37,
-);
-@import "~foundation-sites/scss/foundation";
-@include foundation-everything;
+// $foundation-palette: (
+//   primary: $darkHighlight,
+//   secondary: #767676,
+//   success: #3adb76,
+//   warning: #ffae00,
+//   alert: #cc4b37,
+// );
+// @import "~foundation-sites/scss/foundation";
+// @include foundation-everything;
 
 
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans');
