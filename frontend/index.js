@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Redirect } from "react-router-dom";
 
 import Sidebar from "./components/Sidebar";
 import Home from "./components/Home";
+import About from "./components/About";
 
 import "./index.scss";
 
@@ -14,6 +15,7 @@ const Index = () => {
                 <Sidebar />
                 <div className="PageContent">
                     <Route path="/" exact component={() => <Home />} />
+                    <Route path="/about" component={About} />
                 </div>
             </div>
         </BrowserRouter>

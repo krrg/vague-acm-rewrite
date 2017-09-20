@@ -79,7 +79,7 @@ module.exports = {
     plugins: [
         extractSass,
         new HtmlWebpackPlugin({
-            title: 'Webpack App',
+            title: 'BYU ACM',
             filename: 'index.html',
         })
     ],
